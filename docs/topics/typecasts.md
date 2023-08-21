@@ -1,7 +1,7 @@
 [//]: # (title: Type checks and casts)
 
-In Kotlin, you can perform type checks to check what type an object is at runtime. Type casts allow you to convert objects
-to a different type.
+In Kotlin, you can perform type checks to check the type of an object at runtime. Type casts convert objects to a 
+different type.
 
 > To learn specifically about **generics** type checks and casts, for example `List<T>`, `Map<K,V>`, see [Generics type checks and casts](generics.md#generics-type-checks-and-casts).
 >
@@ -67,8 +67,11 @@ when (x) {
 }
 ```
 
-Note that smart casts work only when the compiler can guarantee that the variable won't change between the check and its usage.
-More specifically, smart casts can be used in the following conditions:
+> Note that smart casts work only when the compiler can guarantee that the variable won't change between the check and its usage.
+>
+{type="warning"}
+
+Smart casts can be used in the following conditions:
 
 <table header-style="none">
         <tr>
@@ -107,7 +110,7 @@ More specifically, smart casts can be used in the following conditions:
 
 ## "Unsafe" cast operator
 
-Usually, the cast operator throws an exception if the cast isn't possible. Thus, it's called *unsafe*.
+Usually, the cast operator throws an exception if the cast isn't possible. Thus, it's called _unsafe_.
 The unsafe cast in Kotlin is done by the infix operator `as`.
 
 ```kotlin
